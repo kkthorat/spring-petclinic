@@ -13,18 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.springframework.samples.petclinic.model;
 
-package org.springframework.samples.petclinic.system;
+import java.io.Serializable;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
-@Controller
-class WelcomeController {
+import org.springframework.samples.petclinic.model.NamedEntity;
 
-	@GetMapping("/")
-	public String welcome() {
-		return "welcome";
-	}
+/**
+ * Models a {@link Vet Vet's} specialty (for example, dentistry).
+ *
+ * @author Juergen Hoeller
+ */
+@Entity
+@Table(name = "specialties")
+public class Specialty extends NamedEntity implements Serializable {
 
 }

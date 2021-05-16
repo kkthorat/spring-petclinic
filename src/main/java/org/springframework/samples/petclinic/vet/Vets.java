@@ -15,6 +15,8 @@
  */
 package org.springframework.samples.petclinic.vet;
 
+import org.springframework.samples.petclinic.model.Vet;
+
 import java.util.ArrayList;
 import java.util.List;
 
